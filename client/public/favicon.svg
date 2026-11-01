@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Pastel Peach + Pink Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F5" />
+      <stop offset="50%" stop-color="#FFE2D5" />
+      <stop offset="100%" stop-color="#FFD4C4" />
+    </linearGradient>
+
+    <!-- Mortarboard Top Soft Gradient -->
+    <linearGradient id="capTopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#FFF0EB" />
+    </linearGradient>
+
+    <!-- Soft Ambient Shadow -->
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#A65D7B" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- 1. Pastel Rounded Square (Matching .brand-icon-box & .login-logo-box) -->
+  <rect x="24" y="24" width="464" height="464" rx="120" fill="url(#bgGradient)" stroke="#F3DCE2" stroke-width="14" filter="url(#softShadow)" />
+
+  <!-- 2. Inner Gloss Highlight Ring -->
+  <rect x="38" y="38" width="436" height="436" rx="106" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.8" />
+
+  <!-- 3. Decorative Pastel Sparkles -->
+  <!-- Top Right Sparkle Star (Blush Pink #FF8CA3) -->
+  <path d="M 405 85 Q 405 115 435 115 Q 405 115 405 145 Q 405 115 375 115 Q 405 115 405 85 Z" fill="#FF8CA3" />
+  
+  <!-- Top Left Sparkle Star (Soft Lilac #CBB6ED) -->
+  <path d="M 105 115 Q 105 135 125 135 Q 105 135 105 155 Q 105 135 85 135 Q 105 135 105 115 Z" fill="#CBB6ED" />
+
+  <!-- Mini Sparkle Dots Bottom-Left -->
+  <circle cx="95" cy="385" r="9" fill="#FFC9D9" />
+  <circle cx="120" cy="415" r="5" fill="#FF8CA3" />
+
+  <!-- Cute AI Mascot Sparkle Heart (Bottom-Right #FF8CA3) -->
+  <path d="M 405 385 C 405 374 416 364 428 364 C 438 364 444 371 446 376 C 448 371 454 364 464 364 C 476 364 487 374 487 385 C 487 402 468 418 446 433 C 424 418 405 402 405 385 Z" fill="#FF8CA3" opacity="0.95" />
+
+  <!-- 4. Graduation Cap Lower Skull Base (Dark Mauve #493B46) -->
+  <path d="M 152 265 V 335 C 152 385 360 385 360 335 V 265" fill="#FFFFFF" stroke="#493B46" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Under-cap Peach Shadow Contour -->
+  <path d="M 180 320 C 215 348 297 348 332 320" fill="none" stroke="#FFE2D5" stroke-width="10" stroke-linecap="round" />
+
+  <!-- 5. Mortarboard Diamond Top (Muted Rose #A65D7B) -->
+  <polygon points="256,145 425,230 256,315 87,230" fill="url(#capTopGrad)" stroke="#A65D7B" stroke-width="20" stroke-linejoin="round" />
+
+  <!-- 6. Hanging Tassel & Cord -->
+  <path d="M 256 230 Q 350 220 425 240 Q 435 270 435 340" fill="none" stroke="#493B46" stroke-width="12" stroke-linecap="round" />
+  <circle cx="435" cy="350" r="14" fill="#A65D7B" stroke="#493B46" stroke-width="4" />
+  <path d="M 430 364 L 426 395 M 435 364 L 435 398 M 440 364 L 444 395" stroke="#A65D7B" stroke-width="5" stroke-linecap="round" />
+
+  <!-- 7. Center Button on Cap -->
+  <circle cx="256" cy="230" r="14" fill="#FFC9D9" stroke="#A65D7B" stroke-width="8" />
+</svg>
+

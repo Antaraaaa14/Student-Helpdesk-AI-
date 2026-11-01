@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="mascotBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F5" />
+      <stop offset="60%" stop-color="#FFE2D5" />
+      <stop offset="100%" stop-color="#FFD4C4" />
+    </linearGradient>
+    <filter id="mascotShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#A65D7B" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect x="24" y="24" width="464" height="464" rx="120" fill="url(#mascotBg)" stroke="#F3DCE2" stroke-width="14" filter="url(#mascotShadow)" />
+  <rect x="38" y="38" width="436" height="436" rx="106" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.8" />
+
+  <!-- Sparkles -->
+  <path d="M 405 85 Q 405 115 435 115 Q 405 115 405 145 Q 405 115 375 115 Q 405 115 405 85 Z" fill="#FF8CA3" />
+  <path d="M 105 115 Q 105 135 125 135 Q 105 135 105 155 Q 105 135 85 135 Q 105 135 105 115 Z" fill="#CBB6ED" />
+
+  <!-- AI Robot Mascot Scaled to Center (from HomeView.jsx) -->
+  <g transform="translate(46, 20) scale(3.2)">
+    <!-- Shadow -->
+    <ellipse cx="65" cy="120" rx="36" ry="6" fill="#FFE2D5" opacity="0.8" />
+
+    <!-- Antenna -->
+    <line x1="65" y1="20" x2="65" y2="35" stroke="#A65D7B" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="65" cy="18" r="4.5" fill="#FFC9D9" stroke="#A65D7B" stroke-width="1.5" />
+
+    <!-- Head -->
+    <rect x="30" y="35" width="70" height="52" rx="20" fill="#FFFFFF" stroke="#F3DCE2" stroke-width="2.5" />
+
+    <!-- Face Screen -->
+    <rect x="37" y="42" width="56" height="38" rx="14" fill="#3D2D3A" />
+
+    <!-- Happy Eyes -->
+    <path d="M48 58 Q53 53 58 58" stroke="#FFE2D5" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M72 58 Q77 53 82 58" stroke="#FFE2D5" stroke-width="3" stroke-linecap="round" fill="none" />
+
+    <!-- Rosy Cheeks -->
+    <circle cx="45" cy="65" r="3.5" fill="#FFC9D9" opacity="0.9" />
+    <circle cx="85" cy="65" r="3.5" fill="#FFC9D9" opacity="0.9" />
+
+    <!-- Body -->
+    <rect x="42" y="90" width="46" height="26" rx="10" fill="#FFFFFF" stroke="#F3DCE2" stroke-width="2.5" />
+    <!-- Heart on chest -->
+    <path d="M65 99 C63 96, 59 96, 59 99 C59 103, 65 107, 65 107 C65 107, 71 103, 71 99 C71 96, 67 96, 65 99 Z" fill="#FF8CA3" />
+
+    <!-- Arms -->
+    <path d="M38 96 C30 96, 28 84, 25 80" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+    <path d="M38 96 C30 96, 28 84, 25 80" stroke="#F3DCE2" stroke-width="2" stroke-linecap="round" fill="none" />
+    <circle cx="24" cy="79" r="4" fill="#FFC9D9" />
+
+    <path d="M92 96 C100 96, 102 84, 105 80" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+    <path d="M92 96 C100 96, 102 84, 105 80" stroke="#F3DCE2" stroke-width="2" stroke-linecap="round" fill="none" />
+    <circle cx="106" cy="79" r="4" fill="#FFC9D9" />
+  </g>
+</svg>
+
