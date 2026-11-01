@@ -1,7 +1,7 @@
 # 🎓 AI-Powered Student Helpdesk
 
 <p align="center">
-  **An intelligent, AI-powered platform designed to simplify student support and provide quick answers to frequently asked questions.**
+  *An intelligent, AI-powered platform designed to simplify student support and provide quick answers to frequently asked questions.*
 </p>
 
 ---
@@ -126,7 +126,8 @@ Use the development command specified in your project's `package.json` if it dif
 
 ## 📸 Project Preview
 
-_Add screenshots of your Student Helpdesk homepage, chatbot interface, and AI-generated responses here._
+![Uploading image.png…]()
+
 
 ## 👩‍💻 Developer
 
