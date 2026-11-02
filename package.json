@@ -8,9 +8,12 @@
     "client": "cd client && npm run dev",
     "dev": "cd client && npm run dev",
     "build": "cd client && npm run build",
-    "build:deploy": "cd client && npm run build && cd .. && node server/index.js",
+    "build:deploy": "cd server && npm install && cd ../client && npm install && npm run build",
     "test": "cd server && npm test",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "keywords": [
     "student-helpdesk",

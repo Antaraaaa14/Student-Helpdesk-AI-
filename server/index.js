@@ -14,20 +14,29 @@ const app = express();
 // ---------------------------------------------------------------
 // CORS — allow the configured client origin(s), or all origins
 // in development when CLIENT_ORIGIN is not set.
+// The Render deployment URL is always whitelisted so the
+// frontend (served by this same Express server) can call the API.
 // ---------------------------------------------------------------
-const allowedOrigins = (process.env.CLIENT_ORIGIN || "")
-  .split(",")
-  .map((o) => o.trim())
-  .filter(Boolean);
+const RENDER_URL = "https://student-helpdesk-ai.onrender.com";
+
+const allowedOrigins = [
+  RENDER_URL,
+  ...(process.env.CLIENT_ORIGIN || "")
+    .split(",")
+    .map((o) => o.trim())
+    .filter(Boolean)
+];
 
 app.use(
   cors({
     origin: (origin, callback) => {
       // Allow requests with no origin (mobile apps, curl, server-to-server)
       if (!origin) return callback(null, true);
-      // If no explicit allowlist is configured, permit all origins (dev mode)
-      if (allowedOrigins.length === 0) return callback(null, true);
+      // Always allow the Render deployment domain and any configured origins
       if (allowedOrigins.includes(origin)) return callback(null, true);
+      // In development (no strict list beyond Render URL) allow localhost origins
+      if (!process.env.CLIENT_ORIGIN && origin.startsWith("http://localhost"))
+        return callback(null, true);
       callback(new Error(`CORS policy: origin '${origin}' is not allowed`));
     },
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],

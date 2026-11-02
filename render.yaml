@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: Student-Helpdesk-AI
+    runtime: node
+    region: oregon
+
+    # Install server deps, then build the React client
+    buildCommand: |
+      cd server && npm install
+      cd ../client && npm install && npm run build
+
+    # Start the Express server (it also serves the built React app)
+    startCommand: node server/index.js
+
+    # Environment variables — secret values must be added in the Render dashboard
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false          # Set this in Render dashboard → Environment
+      - key: GEMINI_API_KEY
+        sync: false          # Set this in Render dashboard → Environment
+      # CLIENT_ORIGIN: leave empty — frontend is served by the same Express server
+      # (same-origin requests don't go through CORS at all)
+      - key: CLIENT_ORIGIN
+        value: ""
