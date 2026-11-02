@@ -26,3 +26,4 @@ services:
       # (same-origin requests don't go through CORS at all)
       - key: CLIENT_ORIGIN
         value: ""
+
