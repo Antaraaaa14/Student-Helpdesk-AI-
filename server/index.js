@@ -17,10 +17,14 @@ const app = express();
 // The Render deployment URL is always whitelisted so the
 // frontend (served by this same Express server) can call the API.
 // ---------------------------------------------------------------
-const RENDER_URL = "https://student-helpdesk-ai.onrender.com";
+// Always-allowed origins (same project, different deployment targets)
+const ALWAYS_ALLOWED = [
+  "https://student-helpdesk-ai.onrender.com",
+  "https://student-helpdesk-ai.vercel.app"
+];
 
 const allowedOrigins = [
-  RENDER_URL,
+  ...ALWAYS_ALLOWED,
   ...(process.env.CLIENT_ORIGIN || "")
     .split(",")
     .map((o) => o.trim())
