@@ -1,146 +1,244 @@
-# 🎓 AI-Powered Student Helpdesk
+# 🎓 AI Student Helpdesk Assistant
 
-<p align="center">
-  *An intelligent, AI-powered platform designed to simplify student support and provide quick answers to frequently asked questions.*
-</p>
+### Smart, Simple and AI-Powered Student Support
+
+An AI-powered student support platform designed to make college-related information more accessible through natural-language conversations. The application helps students ask questions, explore FAQs, receive relevant responses and access student support through an interactive dashboard.
 
 ---
 
-## 📌 About the Project
+## 🌐 Live Application
 
-The **AI-Powered Student Helpdesk** is a web-based application developed to make student support more accessible, efficient, and convenient.
+| Component | Deployed Link |
+|---|---|
+| **Frontend Application** | https://student-helpdesk-ai.vercel.app/ |
+| **Backend API** | https://student-helpdesk-ai.onrender.com |
 
-The platform allows students to ask questions related to academics, admissions, examinations, attendance, fees, assignments, and other college-related activities.
+**Explore the application:** [AI Student Helpdesk Assistant](https://student-helpdesk-ai.vercel.app/)
 
-Unlike traditional FAQ systems that rely only on predefined questions and fixed responses, this application aims to provide a more interactive experience through an AI-powered chatbot that understands natural language and generates relevant responses.
+---
 
-The main objective is to reduce repetitive queries, improve access to information, and make communication between students and the institution easier.
+## 📌 Project Overview
+
+The AI Student Helpdesk Assistant is a web-based application developed to simplify communication between students and college support services.
+
+Students often face difficulties finding accurate information about fees, attendance, examinations, assignments and other academic activities. This application provides a centralized platform where students can ask questions in natural language and receive relevant assistance.
+
+By integrating AI capabilities and Prompt Engineering techniques, the system aims to understand student queries, generate context-aware responses and provide a smoother helpdesk experience.
+
+---
+
+## 🎯 Project Objectives
+
+- Provide a centralized platform for student assistance.
+- Make college-related information easier to access.
+- Allow students to communicate using natural language.
+- Generate relevant and understandable AI responses.
+- Organize frequently asked questions into categories.
+- Maintain a record of student queries.
+- Support staff confirmation for college-specific information that requires verification.
+
+---
 
 ## ✨ Key Features
 
-- **AI-Powered Chatbot:** Interact with an AI assistant to get answers to student-related queries.
-- **Natural Language Understanding:** Accept questions in different sentence structures and everyday language.
-- **Dynamic Responses:** Generate relevant responses based on the user's actual question instead of relying entirely on fixed replies.
-- **FAQ-Based Assistance:** Provide information about admissions, attendance, examinations, fees, assignments, and academic activities.
-- **Conversational Interaction:** Support basic greetings, general queries, and follow-up questions.
-- **Smart Fallback Responses:** Guide students to the appropriate department when the required information is unavailable.
-- **User-Friendly Interface:** Simple and accessible design for a smooth student experience.
+### 1. AI-Powered Question Answering
+Students can enter questions in natural language and receive relevant, conversational responses.
 
-## 🤖 AI Chatbot Functionality
+### 2. Smart Query Understanding
+The application analyses student messages to understand their intent and determine the appropriate response.
 
-The chatbot is designed to work as an intelligent FAQ assistant rather than a traditional rule-based chatbot.
+### 3. FAQ Management
+Students can explore frequently asked questions and access relevant information through the FAQ section.
 
-It focuses on three main types of interactions:
+### 4. Category-Based Navigation
+Queries are organized into categories such as:
+- Fees & Payments
+- Attendance
+- Assignments
+- Examinations
 
-| Interaction | Expected Behaviour |
+### 5. Student Query History
+Students can view their recent and previously submitted queries through the My Queries section.
+
+### 6. Admin Dashboard & Analytics
+The administrative dashboard provides an interface for reviewing and monitoring helpdesk activity.
+
+### 7. Query Escalation
+Queries requiring official college confirmation can be directed for staff review instead of generating unverified information.
+
+### 8. Interactive User Interface
+A clean, responsive and student-friendly interface with a pastel colour theme, intuitive navigation and interactive components.
+
+---
+
+## 🤖 AI Integration & Prompt Engineering
+
+Prompt Engineering plays an important role in guiding how the AI assistant understands and responds to student messages.
+
+The application uses structured instructions to guide the AI's behaviour.
+
+**Important Prompt Engineering concepts:**
+
+- **Role Definition:** Defines the AI as a Student Helpdesk Assistant.
+- **Context Setting:** Provides the AI with the purpose and context of the application.
+- **Clear Instructions:** Guides the AI on how to understand and respond to student queries.
+- **Response Formatting:** Encourages clear, friendly and understandable answers.
+- **Constraints:** Prevents the AI from inventing unverified college policies or official information.
+
+### AI Response Approach
+
+| Query Type | Expected Behaviour |
 |---|---|
-| General Greetings | Responds naturally to messages such as Hi, Hello, and How are you. |
-| Student-Related Questions | Provides relevant answers to academic and college-related queries. |
-| Unknown Queries | Explains when information is unavailable and guides students towards further assistance. |
+| Greetings | Provides a friendly welcome response |
+| FAQ-related questions | Uses relevant approved FAQ information |
+| General academic questions | Generates helpful educational explanations |
+| Unclear questions | Asks the student for clarification |
+| Unverified college-specific queries | Directs the query for staff confirmation when required |
 
-The chatbot aims to understand the intent behind a question, even when students phrase the same question differently.
+---
 
-## 🛠️ Technology Stack
+## ⚙️ Technology Stack
 
-Update this section according to the actual technologies used in the project.
+| Technology | Purpose |
+|---|---|
+| React.js | Frontend development |
+| Vite | Frontend development and build tooling |
+| Node.js | Backend runtime environment |
+| Express.js | Backend API development |
+| MongoDB | Database management |
+| Google Gemini API | AI-powered query understanding and response generation |
+| Antigravity | AI-assisted application development |
+| Vercel | Frontend deployment |
+| Render | Backend deployment |
 
-- **Frontend:** [Add frontend technologies]
-- **Backend:** [Add backend technologies]
-- **AI Integration:** [Add AI model/API]
-- **Database:** [Add database, if used]
-- **Development Tools:** Git, GitHub, and VS Code
+---
 
-## ⚙️ How It Works
+## 🔄 Application Workflow
 
-1. The student opens the Student Helpdesk website.
-2. The student enters a question or message in the chatbot.
-3. The application processes the user's input.
-4. The AI understands the query and generates an appropriate response using the available information.
-5. The response is displayed to the student.
-6. If the required information is unavailable, the chatbot provides suitable guidance for further assistance.
+The application follows this general workflow:
 
-## 🚀 Getting Started
+1. Student opens the Student Helpdesk.
+2. Student enters a question.
+3. The backend receives and processes the query.
+4. The AI analyses the query and identifies its intent.
+5. Relevant FAQ information is retrieved when applicable.
+6. Gemini generates an appropriate response based on the provided context and instructions.
+7. Queries requiring official verification can be directed for staff confirmation.
+8. The response is displayed to the student.
+9. Query information is maintained in the student's history.
 
-Follow these steps to run the project locally.
+---
 
-**1. Clone the repository**
+## 🏗️ Application Architecture
+
+The application follows a frontend-backend-database architecture.
+
+**Frontend:** React.js and Vite provide the user interface through which students interact with the helpdesk.
+
+**Backend:** Node.js and Express.js handle application requests, API communication and backend processing.
+
+**Database:** MongoDB is used for application data management.
+
+**AI Integration:** Google Gemini API provides AI-powered language understanding and response generation.
+
+---
+
+## 🚀 Running the Project Locally
+
+### Prerequisites
+
+Make sure the following are installed:
+
+- Node.js
+- npm
+- MongoDB
+- Git
+
+### 1. Clone the Repository
 
 ```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
-**2. Navigate to the project folder**
+### 2. Navigate to the Project Folder
 
 ```bash
 cd YOUR_PROJECT_FOLDER
 ```
 
-**3. Install dependencies**
+### 3. Install Dependencies
 
-Use the appropriate installation command for your project's technology stack.
-
-For a Node.js project:
+Install the dependencies separately inside the frontend and backend directories:
 
 ```bash
+cd frontend
 npm install
 ```
 
-**4. Configure environment variables**
-
-Create a `.env` file in the project root and add the required API credentials and configuration.
-
-Example:
-
-```env
-AI_API_KEY=your_api_key_here
-```
-
-Do not upload your actual API keys or confidential credentials to GitHub.
-
-**5. Start the application**
-
-For a Node.js project:
-
 ```bash
-npm start
+cd ../backend
+npm install
 ```
 
-Use the development command specified in your project's `package.json` if it differs.
+### 4. Configure Environment Variables
 
-## 🎯 Project Objectives
+Create a `.env` file in the backend directory and configure the required credentials and connection settings used by your application.
 
-- Make student-related information easier to access.
-- Reduce dependency on repetitive manual enquiries.
-- Improve the traditional FAQ experience using AI.
-- Provide a conversational interface for student support.
-- Explore practical applications of Artificial Intelligence in education.
+Typical configuration includes:
 
-## 🔮 Future Enhancements
+- MongoDB connection string
+- Gemini API key
+- Backend port
 
-- Integration with an institution-specific FAQ knowledge base.
-- Student authentication and personalized assistance.
-- Support ticket generation and staff escalation.
-- Multilingual chatbot support.
-- Admin dashboard for managing FAQs and student queries.
-- Improved conversation history and context management.
+**Note:** Use the exact environment variable names expected by your backend code. Never upload API keys, passwords or database credentials to GitHub.
 
-## 📸 Project Preview
+### 5. Start the Application
 
-![Uploading image.png…]()
+Run the backend and frontend using the development scripts defined in their respective `package.json` files.
 
-
-## 👩‍💻 Developer
-
-**Antara Palwankar**
-
-B.Tech Student | Aspiring Software Developer
-
-GitHub: [@Antaraaaa14](https://github.com/Antaraaaa14)
+Once both services are running, open the local frontend URL in your browser.
 
 ---
 
-<p align="center">
-  **Built with curiosity, creativity, and a passion for exploring AI-powered solutions.**
-</p>
+## 🔐 Security Considerations
 
-⭐ If you find this project interesting, consider giving the repository a star!
+- Keep API keys and database credentials private.
+- Store sensitive configuration in environment variables.
+- Avoid exposing private backend credentials in frontend code.
+- Validate user input before processing requests.
+- Use verified information for official college-related responses.
+
+---
+
+## 🔮 Future Enhancements
+
+- Multilingual student support.
+- Improved AI response personalization.
+- More advanced query classification.
+- Enhanced admin analytics and reporting.
+- Additional FAQ management capabilities.
+- Improved query tracking and staff review workflows.
+
+---
+
+## 🎓 Project Significance
+
+The AI Student Helpdesk Assistant demonstrates how Artificial Intelligence and Prompt Engineering can be integrated into a practical student-support application.
+
+It combines conversational AI, structured prompting, web development and database management to create a centralized and accessible helpdesk experience.
+
+---
+
+## 👩‍💻 Developed By
+
+**Antara Palwankar**
+
+B.Tech – Computer Science and Engineering
+
+**Project:** AI Student Helpdesk Assistant
+
+---
+
+### ⭐ Making Student Support Smarter with AI
+
+If you find this project interesting, feel free to explore the live application using the links provided above.
