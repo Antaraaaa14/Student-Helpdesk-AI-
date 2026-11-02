@@ -6,6 +6,9 @@ server/data/
 .env
 .env.*
 !.env.example
+client/.env
+client/.env.*
+!client/.env.example
 
 # Build files
 dist/

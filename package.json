@@ -6,8 +6,11 @@
     "start": "node server/index.js",
     "server": "cd server && npm start",
     "client": "cd client && npm run dev",
+    "dev": "cd client && npm run dev",
     "build": "cd client && npm run build",
-    "test": "cd server && npm test"
+    "build:deploy": "cd client && npm run build && cd .. && node server/index.js",
+    "test": "cd server && npm test",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
   },
   "keywords": [
     "student-helpdesk",

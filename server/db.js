@@ -84,7 +84,7 @@ async function connect() {
 
   for (const uri of uris) {
     try {
-      await mongoose.connect(uri, { serverSelectionTimeoutMS: 2000 });
+      await mongoose.connect(uri, { serverSelectionTimeoutMS: 8000 });
       isUsingMongo = true;
       const masked = uri.replace(/\/\/([^:]+):([^@]+)@/, "//$1:****@");
       activeMode = "MongoDB (" + (uri.includes("mongodb+srv") ? "Atlas Cloud" : "Local Port 27017") + ": " + masked + ")";

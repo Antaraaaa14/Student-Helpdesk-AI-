@@ -1,3 +1,5 @@
+require("dotenv").config({ path: require("path").resolve(__dirname, "../.env") });
+
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
@@ -8,7 +10,32 @@ const { processQuery, PROMPTS, updateFaqsCache } = require("./pipeline");
 const { FAQS: INITIAL_FAQS, TESTS, CATS } = require("./faqs");
 
 const app = express();
-app.use(cors());
+
+// ---------------------------------------------------------------
+// CORS — allow the configured client origin(s), or all origins
+// in development when CLIENT_ORIGIN is not set.
+// ---------------------------------------------------------------
+const allowedOrigins = (process.env.CLIENT_ORIGIN || "")
+  .split(",")
+  .map((o) => o.trim())
+  .filter(Boolean);
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Allow requests with no origin (mobile apps, curl, server-to-server)
+      if (!origin) return callback(null, true);
+      // If no explicit allowlist is configured, permit all origins (dev mode)
+      if (allowedOrigins.length === 0) return callback(null, true);
+      if (allowedOrigins.includes(origin)) return callback(null, true);
+      callback(new Error(`CORS policy: origin '${origin}' is not allowed`));
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
+  })
+);
+
 app.use(express.json({ limit: "500kb" }));
 
 const wrap = (fn) => (req, res) => fn(req, res).catch((e) => {
@@ -498,11 +525,12 @@ const PORT = process.env.PORT || 5001;
 connect()
   .then((mode) => {
     dbMode = mode;
-    app.listen(PORT, "127.0.0.1", () => {
+    app.listen(PORT, "0.0.0.0", () => {
       console.log(`\n======================================================`);
       console.log(`AI Student Helpdesk Assistant Server Running`);
-      console.log(`URL: http://127.0.0.1:${PORT}`);
+      console.log(`URL: http://localhost:${PORT}`);
       console.log(`Database Mode: ${mode}`);
+      console.log(`CLIENT_ORIGIN: ${process.env.CLIENT_ORIGIN || "(any – dev mode)"}`);
       console.log(`======================================================\n`);
     });
   })
